@@ -1,0 +1,291 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    background: rgb(41, 99, 86);
+    background: -moz-linear-gradient(
+        0deg,
+        rgba(41, 99, 86, 1) 0%,
+        rgba(254, 254, 254, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+        0deg,
+        rgba(41, 99, 86, 1) 0%,
+        rgba(254, 254, 254, 1) 100%
+    );
+    background: linear-gradient(
+        0deg,
+        rgba(41, 99, 86, 1) 0%,
+        rgba(254, 254, 254, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#296356",endColorstr="#fefefe",GradientType=1);
+}
+
+.none {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    margin: 1.5rem;
+}
+
+main {
+    margin: 1.5rem;
+}
+
+#fries-menu {
+    display: none;
+}
+
+#sidebar-menu {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    right: -50%;
+    transition: right 0.5s;
+}
+
+#drop-shadow {
+    display: none;
+}
+
+aside {
+    width: 28%;
+}
+
+section {
+    width: 68%;
+}
+
+.daily-rate-boxes {
+    margin-bottom: 5rem;
+}
+
+.daily-rate-box {
+    width: 47%;
+}
+
+.daily-rate-box .price-box {
+    gap: 1rem;
+}
+
+.card-body {
+    display: grid;
+    grid-template-columns: auto min-content auto;
+}
+
+.hr {
+    border-right: 1px solid #d2d2d2;
+}
+
+.year,
+.month,
+.dates {
+    cursor: pointer;
+}
+
+.months {
+    display: none;
+}
+
+.days {
+    display: none;
+}
+
+/* high chart */
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+/* gauge */
+.highcharts-figure .chart-container {
+    width: 300px;
+    height: 200px;
+    float: left;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    margin: 0 auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+@media (max-width: 600px) {
+    .highcharts-figure,
+    .highcharts-data-table table {
+        width: 100%;
+    }
+
+    .highcharts-figure .chart-container {
+        width: 300px;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1338px) {
+    .card-body {
+        grid-template-columns: auto;
+    }
+
+    .daily-rate-box .price-box {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        padding: 0 10px 10px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .daily-rate-boxes {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .daily-rate-box {
+        width: 100%;
+    }
+
+    .select-date-ul {
+        padding: 0;
+    }
+
+    .daily-rate-boxes {
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    header {
+        position: relative;
+    }
+
+    #fries-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        width: 2.4rem;
+        gap: 7px;
+        cursor: pointer;
+    }
+
+    #fries-menu > div {
+        width: 100%;
+        height: 4px;
+        background-color: #115311;
+        border-radius: 5px;
+    }
+
+    #fries-menu > #middle-fry {
+        width: 70%;
+    }
+
+    #sidebar-menu > .card {
+        height: 100%;
+        overflow: hidden;
+        background-image: linear-gradient(135deg, #92ffc0 10%, #002661 100%);
+        border: 0;
+        border-radius: 0;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        font-size: 1.2rem;
+    }
+
+    #drop-shadow {
+        z-index: 1;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        background-color: rgb(0 0 0 / 50%);
+    }
+
+    aside {
+        display: none;
+    }
+
+    #main-content {
+        width: 100%;
+    }
+}
