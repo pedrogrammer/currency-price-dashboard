@@ -181,7 +181,7 @@ function app(value) {
 
         function currencyRate(currency, year, month, day) {
             $.getJSON(
-                `http://api.navasan.tech/ohlcSearch/?api_key=freeOZK3CpK1NNqRWYDEClj7t2jMh68W&item=${
+                `https://api.navasan.tech/ohlcSearch/?api_key=freeOZK3CpK1NNqRWYDEClj7t2jMh68W&item=${
                     currency === 'dollar' ? 'usd_sell' : 'eur'
                 }&start=${year}-${month}-${
                     day - 2
@@ -259,11 +259,11 @@ function app(value) {
             }
 
             $.getJSON(
-                `http://api.navasan.tech/ohlcSearch/?api_key=freeOZK3CpK1NNqRWYDEClj7t2jMh68W&item=usd_sell&start=${thisYear}-${thisMonth}-1&end=${thisYear}-${thisMonth}-31`,
+                `https://api.navasan.tech/ohlcSearch/?api_key=freeOZK3CpK1NNqRWYDEClj7t2jMh68W&item=usd_sell&start=${thisYear}-${thisMonth}-1&end=${thisYear}-${thisMonth}-31`,
                 function (EuroResult) {
                     var euroSeriesData = preparingResult(EuroResult);
                     $.getJSON(
-                        `http://api.navasan.tech/ohlcSearch/?api_key=freeOZK3CpK1NNqRWYDEClj7t2jMh68W&item=eur&start=${thisYear}-${thisMonth}-1&end=${thisYear}-${thisMonth}-31`,
+                        `https://api.navasan.tech/ohlcSearch/?api_key=freeOZK3CpK1NNqRWYDEClj7t2jMh68W&item=eur&start=${thisYear}-${thisMonth}-1&end=${thisYear}-${thisMonth}-31`,
                         function (dollarResult) {
                             var dollarSeriesData =
                                 preparingResult(dollarResult);
